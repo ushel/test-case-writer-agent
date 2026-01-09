@@ -1,0 +1,39 @@
+from langsmith import traceable
+from typing import Any
+import re
+
+class TargetAgent:
+    def __init__(self, tools: dict):
+        self.tools = tools
+
+    def _normalize_input(self, user_input: Any) -> str:
+        if isinstance(user_input, str):
+            return user_input
+        if isinstance(user_input, dict):
+            for k in ("input", "question", "query", "text"):
+                if k in user_input and isinstance(user_input[k], str):
+                    return user_input[k]
+            return str(user_input)
+        return str(user_input)
+
+    def _looks_like_math(self, text: str) -> bool:
+        return bool(re.search(r"\d+\s*[\+\-\*/]\s*\d+", text))
+
+    @traceable(run_type="chain", name="target_agent_invoke")
+    def invoke(self, user_input):
+        text = self._normalize_input(user_input).lower()
+        tool_calls = []
+
+        if "calculate" in text or self._looks_like_math(text):
+            expr = re.sub(r"[^\d\+\-\*/\.]", "", text)
+            result = self.tools["calculator"](expr)
+
+            tool_calls.append({
+                "tool": "calculator",
+                "input": expr,
+                "output": result
+            })
+
+            return {"final_answer": result, "tool_calls": tool_calls}
+
+        return {"final_answer": "I don't know", "tool_calls": []}
