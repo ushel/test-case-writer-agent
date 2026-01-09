@@ -5,7 +5,7 @@
       "problem": "2+2"
     },
     "expected_tool": "calculator",
-    "expected_behavior": "Returns result: 4"
+    "expected_behavior": "returns result: 4"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
       "problem": "5*3"
     },
     "expected_tool": "calculator",
-    "expected_behavior": "Returns result: 15"
+    "expected_behavior": "returns result: 15"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
       "problem": "10/2"
     },
     "expected_tool": "calculator",
-    "expected_behavior": "Returns result: 5.0"
+    "expected_behavior": "returns result: 5.0"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
       "problem": "7-1"
     },
     "expected_tool": "calculator",
-    "expected_behavior": "Returns result: 6"
+    "expected_behavior": "returns result: 6"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
       "problem": "3^2"
     },
     "expected_tool": "calculator",
-    "expected_behavior": "Returns result: 9"
+    "expected_behavior": "returns result: 9"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
       "problem": "12/0"
     },
     "expected_tool": null,
-    "expected_behavior": "Throws error: Division by zero is not allowed"
+    "expected_behavior": "throws error: Division by zero is not allowed"
   },
   {
     "id": 7,
@@ -53,6 +53,6 @@
       "problem": "abc+def"
     },
     "expected_tool": null,
-    "expected_behavior": "Returns error message: Invalid input. Please enter a valid math problem."
+    "expected_behavior": "returns error message: Invalid input. Please enter a valid math problem."
   }
 ]

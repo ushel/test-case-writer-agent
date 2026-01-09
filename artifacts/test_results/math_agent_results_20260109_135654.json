@@ -1,0 +1,72 @@
+[
+  {
+    "test_id": 1,
+    "input": {
+      "problem": "2+2"
+    },
+    "expected_tool": "calculator",
+    "actual_tool": "calculator",
+    "actual_output": "4",
+    "score": 1.0
+  },
+  {
+    "test_id": 2,
+    "input": {
+      "problem": "5*3"
+    },
+    "expected_tool": "calculator",
+    "actual_tool": "calculator",
+    "actual_output": "15",
+    "score": 1.0
+  },
+  {
+    "test_id": 3,
+    "input": {
+      "problem": "10/2"
+    },
+    "expected_tool": "calculator",
+    "actual_tool": "calculator",
+    "actual_output": "5.0",
+    "score": 1.0
+  },
+  {
+    "test_id": 4,
+    "input": {
+      "problem": "7-1"
+    },
+    "expected_tool": "calculator",
+    "actual_tool": "calculator",
+    "actual_output": "6",
+    "score": 1.0
+  },
+  {
+    "test_id": 5,
+    "input": {
+      "problem": "3^2"
+    },
+    "expected_tool": "calculator",
+    "actual_tool": null,
+    "actual_output": "I don't know",
+    "score": 0.0
+  },
+  {
+    "test_id": 6,
+    "input": {
+      "problem": "12/0"
+    },
+    "expected_tool": null,
+    "actual_tool": "calculator",
+    "actual_output": "error",
+    "score": 0.0
+  },
+  {
+    "test_id": 7,
+    "input": {
+      "problem": "abc+def"
+    },
+    "expected_tool": null,
+    "actual_tool": null,
+    "actual_output": "I don't know",
+    "score": 1.0
+  }
+]
