@@ -1,0 +1,202 @@
+[
+  {
+    "input": "calculate 2 + 2",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "calculate 10 / 5",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "hello",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "(2 + 3) * 4",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "two + 2",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "(2 + 3) * 4",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "random text",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "calculate",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "two + 2",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "sum of 4 and 5",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "5 * 3",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "(2 + 3) * 4",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "divide 4 by 2",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "2 + two",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "sum of 4 and 5",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "hello",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "calculate 2 + 2",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "sum of 4 and 5",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "hello",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "hello",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "calculate",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "calculate",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "2 ** 3",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "2 + two",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "2 + two",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "2 + two",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "what is 2+2",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "calculate 2 + 2",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "two + 2",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "random text",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "calculate",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "random text",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "calculate",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "2 + two",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "2 + two",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "calculate 2 + 2",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "calculate 2 + 2",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "calculate",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  },
+  {
+    "input": "sum of 4 and 5",
+    "expected_tool": "calculator",
+    "expected_behavior": "Should use calculator"
+  },
+  {
+    "input": "calculate",
+    "expected_tool": null,
+    "expected_behavior": "Should NOT use calculator"
+  }
+]

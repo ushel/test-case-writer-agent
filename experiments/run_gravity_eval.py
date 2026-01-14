@@ -1,44 +1,43 @@
-print("RUNNING run_gravity_eval.py FROM:", __file__)
-
 from agents.target_agent import TargetAgent
 from tools.calculator import calculator
 from search.gravity_search import gravity_search
-from search.normalize import normalize_gravity_tests
 from evaluation.evaluator import evaluate
 from utils.file_utils import save_test_cases
 
 if __name__ == "__main__":
-    agent = TargetAgent({"calculator": calculator})
-
     print("\nRunning Gravity Search for Test Case Generation...")
 
-    gravity_raw = gravity_search(agent)
-    gravity_tests = normalize_gravity_tests(gravity_raw)
+    agent = TargetAgent({"calculator": calculator})
 
-    print(f"\nGenerated {len(gravity_tests)} Gravity-based test cases")
+    # ----------------------------------
+    # 1. Generate Gravity test cases
+    # ----------------------------------
+    gravity_tests = gravity_search(agent)
 
-    # -----------------------------
-    # PRINT TEST CASES (DEBUG)
-    # -----------------------------
+    print(f"Generated {len(gravity_tests)} Gravity-based test cases")
+
     print("\nGravity Test Cases:")
     for tc in gravity_tests:
         print(
-            f"{tc['id']} | input='{tc['input']}' | expected={tc['expected_tool']}"
+            f"{tc['input']} | expected={tc['expected_tool']}"
         )
 
-    # -----------------------------
-    # SAVE TEST CASES (THIS IS KEY)
-    # -----------------------------
-    gravity_agent_name = "math_agent_gravity"
-    path = save_test_cases(gravity_tests, gravity_agent_name)
+    # ----------------------------------
+    # 2. SAVE Gravity test cases (KEY FIX)
+    # ----------------------------------
+    path = save_test_cases(
+        gravity_tests,
+        agent_name="math_agent_gravity"
+    )
 
-    print("\n💾 Gravity test cases SAVED at:")
+    print("\nGravity test cases saved at:")
     print("   ", path)
 
-    # -----------------------------
-    # EVALUATE
-    # -----------------------------
+    # ----------------------------------
+    # 3. Evaluate using saved test cases
+    # ----------------------------------
     print("\nEvaluating agent using Gravity-based test cases...")
+
     detailed_results, final_score = evaluate(
         gravity_tests,
         {"calculator": calculator}
